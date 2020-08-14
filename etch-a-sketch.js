@@ -2,6 +2,16 @@ const canvas = document.querySelector('#etch-a-sketch');
 const context = canvas.getContext('2d');
 const shake = document.querySelector('.shake');
 
+const controls = new Set([
+  'ArrowUp',
+  'ArrowDown',
+  'ArrowLeft',
+  'ArrowRight',
+  'w',
+  'a',
+  's',
+  'd',
+]);
 const SIZE = 30;
 const { width, height } = canvas;
 let hue = Math.random() * 360;
@@ -32,7 +42,7 @@ const resetSketch = () => {
 };
 
 const handleKey = ({ key }) => {
-  if (key.includes('Arrow')) {
+  if (controls.has(key)) {
     draw({ key });
   }
 };
@@ -49,7 +59,17 @@ const draw = ({ key }) => {
       context.lineTo(x, y);
       context.stroke();
       break;
+    case 'w':
+      y -= SIZE;
+      context.lineTo(x, y);
+      context.stroke();
+      break;
     case 'ArrowDown':
+      y += SIZE;
+      context.lineTo(x, y);
+      context.stroke();
+      break;
+    case 's':
       y += SIZE;
       context.lineTo(x, y);
       context.stroke();
@@ -59,7 +79,17 @@ const draw = ({ key }) => {
       context.lineTo(x, y);
       context.stroke();
       break;
-    case 'ArrowRight':
+    case 'a':
+      x -= SIZE;
+      context.lineTo(x, y);
+      context.stroke();
+      break;
+    case 'ArrowRight' || 'd' || 'D':
+      x += SIZE;
+      context.lineTo(x, y);
+      context.stroke();
+      break;
+    case 'd':
       x += SIZE;
       context.lineTo(x, y);
       context.stroke();
