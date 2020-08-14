@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch</title>
-    <link rel="stylesheet" href="./base.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
@@ -15,65 +15,5 @@
       </div>
     </div>
     <script src="./etch-a-sketch.js"></script>
-
-    <style>
-      body {
-        min-height: 100vh;
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        background-color: #ffff00;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff8000'/%3E%3Cstop offset='1' stop-color='%23ff8000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2300ff19'/%3E%3Cstop offset='1' stop-color='%2300ff19' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%239900ff'/%3E%3Cstop offset='1' stop-color='%239900ff' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ffff00'/%3E%3Cstop offset='1' stop-color='%23ffff00' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF0000'/%3E%3Cstop offset='1' stop-color='%23FF0000' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%230CF'/%3E%3Cstop offset='1' stop-color='%230CF' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
-        background-attachment: fixed;
-        background-size: cover;
-      }
-
-      canvas {
-        border: 30px solid #030303;
-        border-radius: 10px;
-        /* Set the width and height to half the actual size so it doesn't look pixelated */
-        width: 800px;
-        height: 500px;
-        background: white;
-      }
-
-      canvas.shake {
-        animation: shake 0.5s linear 1;
-      }
-
-      .buttons {
-        display: flex;
-        justify-content: center;
-      }
-      .btn {
-        background: black;
-        margin: -10px 0;
-        border-bottom-right-radius: 15px;
-        border-bottom-left-radius: 15px;
-      }
-
-      @keyframes shake {
-        10%,
-        90% {
-          transform: translate3d(-1px, 0, 0);
-        }
-
-        20%,
-        80% {
-          transform: translate3d(2px, 0, 0);
-        }
-
-        30%,
-        50%,
-        70% {
-          transform: translate3d(-4px, 0, 0);
-        }
-
-        40%,
-        60% {
-          transform: translate3d(4px, 0, 0);
-        }
-      }
-    </style>
   </body>
 </html>
